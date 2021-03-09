@@ -12,15 +12,6 @@ import sample.FizzBuzz;
 @DisplayName("Fizz Buzz 数列とその変換規則を扱う FizzBuzzクラス")
 public class MainTest {
 
-    /**
-     * 今は、1,2,3,5以外の値に対する挙動/情報が書いていない
-     * ex)FizzBuzzって何?
-     * →動作するドキュメントとは言えない
-     * →仕様書にあるものをテストコードに反映
-     * →３の倍数はFizzなど
-     * →nestさせる
-     */
-
     private FizzBuzz fizzbuzz;
 
     @BeforeEach
@@ -36,16 +27,10 @@ public class MainTest {
             void _1を渡すと文字列1を返す() throws Exception {
                 assertEquals("1", fizzbuzz.convert(1));
             }
-            /**
-             * テストコードもメンテナンスする必要がある
-             * →無駄なテスト(三角測量を行った際のコードなど)は消しておく
-             */
-
         }
 
         @Nested
         class _3の倍数のときは代わりにFizzを返す {
-
             @Test
             void _3を渡すと文字列Fizzを返す() throws Exception {
                 assertEquals("Fizz", fizzbuzz.convert(3));
